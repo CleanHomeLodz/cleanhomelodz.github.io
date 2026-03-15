@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CleanHomeLodz – Profesjonalne pranie tapicerki</title>
 
-<!-- SEO -->
 <meta name="description" content="Pranie tapicerki Łódź – profesjonalne czyszczenie sof, narożników, dywanów i materacy. Szybki dojazd do klienta.">
 <meta name="keywords" content="pranie tapicerki łódź, czyszczenie kanapy łódź, pranie dywanów łódź, pranie narożnika łódź, czyszczenie materacy łódź">
 <meta name="robots" content="index, follow">
@@ -20,8 +19,9 @@ background:url('fon.jpg') no-repeat center center fixed;
 background-size:cover;
 }
 
-section{
-background:linear-gradient(rgba(255,255,255,0.95), rgba(245,245,245,0.9));
+/* Прозрачные секции */
+.translucent-block{
+background:rgba(255,255,255,0.6);
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 margin:30px auto;
 max-width:1100px;
@@ -33,16 +33,9 @@ header{
 text-align:center;
 padding:60px 20px;
 color:white;
-position:fixed;
+position:relative;
 width:100%;
-top:0;
-left:0;
 z-index:999;
-transition:background 0.3s;
-}
-
-header.scrolled{
-background:rgba(0,0,0,0.6);
 }
 
 header h1{
@@ -63,17 +56,19 @@ margin-top:10px;
 font-size:20px;
 }
 
-/* Гамбургер */
+/* Гамбургер по центру сверху */
 .hamburger{
 position:absolute;
-top:20px;
-right:20px;
+top:10px;
+left:50%;
+transform:translateX(-50%);
 font-size:30px;
 cursor:pointer;
 color:white;
 z-index:1000;
 }
 
+/* Мобильное меню */
 #mobile-menu{
 position:fixed;
 top:0;
@@ -338,7 +333,6 @@ color:white;
 text-shadow:1px 1px 5px black;
 }
 
-/* Мобильная адаптация */
 @media(max-width:768px){
 nav.desktop{display:none;}
 }
@@ -348,12 +342,13 @@ nav.desktop{display:none;}
 <body>
 
 <header>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
 <img src="logo.png" alt="CleanHomeLodz Logo">
 <h1>CleanHomeLodz</h1>
 <div class="google-rating">⭐⭐⭐⭐⭐ <span style="font-size:16px">Ocena klientów w Google</span></div>
 <p>Profesjonalne pranie tapicerki, dywanów i materacy</p>
 
-<div class="hamburger" onclick="toggleMenu()">☰</div>
 <nav id="mobile-menu">
 <a href="#services">Usługi</a>
 <a href="#pricing">Cennik</a>
@@ -378,7 +373,7 @@ nav.desktop{display:none;}
 <a href="#contact">Kontakt</a>
 </nav>
 
-<section id="services" class="fade-in">
+<section id="services" class="fade-in translucent-block">
 <h2>Nasze usługi</h2>
 <div class="services-grid">
 <div class="service">🛋<h3>Pranie tapicerki</h3><p>Sofy, narożniki i fotele</p></div>
@@ -388,7 +383,7 @@ nav.desktop{display:none;}
 </div>
 </section>
 
-<section id="pricing" class="fade-in">
+<section id="pricing" class="fade-in translucent-block">
 <h2>Cennik</h2>
 <p><b>Sofy i narożniki</b></p>
 <ul>
@@ -410,7 +405,7 @@ nav.desktop{display:none;}
 class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp</a>
 </section>
 
-<section id="gallery" class="fade-in">
+<section id="gallery" class="fade-in translucent-block">
 <h2>Galeria efektów</h2>
 <div class="gallery">
 <img src="galeria.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
@@ -423,12 +418,12 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 <img src="galeria7.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria8.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria9.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
-<img src="galeria10.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
-<img src="galeria11.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria10.webp" alt="Pranie tapicerki – sofa przed и po" onclick="openImage(this)">
+<img src="galeria11.webp" alt="Pranie tapicerki – sofa przed и po" onclick="openImage(this)">
 </div>
 </section>
 
-<section id="reviews" class="fade-in">
+<section id="reviews" class="fade-in translucent-block">
 <h2>Opinie klientów</h2>
 <div class="reviews">
 <div class="review">⭐⭐⭐⭐⭐ <br>Świetna robota! Kanapa wygląda jak nowa. <br><b>Anna – Łódź</b></div>
@@ -439,14 +434,14 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 <a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">⭐ Zobacz więcej opinii w Google</a>
 </section>
 
-<section id="map" class="fade-in">
+<section id="map" class="fade-in translucent-block">
 <h2>Nasza lokalizacja</h2>
 <iframe src="https://maps.google.com/maps?q=lodz&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;border-radius:10px;"></iframe>
 <br><br>
 <a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">📍 Otwórz w Google Maps</a>
 </section>
 
-<section id="contact" class="fade-in">
+<section id="contact" class="fade-in translucent-block">
 <h2>Kontakt</h2>
 <p>Telefon: +48 505 307 930</p>
 <a href="https://wa.me/48505307930" class="action-btn whatsapp">Napisz na WhatsApp</a>
@@ -464,7 +459,6 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 © CleanHomeLodz 2026
 </footer>
 
-<!-- Плавающие кнопки -->
 <a href="https://wa.me/48505307930" class="whatsapp-float">💬</a>
 <a href="tel:+48505307930" class="phone-float">📞</a>
 <a href="#" class="top-float">⬆</a>
@@ -489,22 +483,10 @@ document.body.appendChild(viewer);
 // Анимация при прокрутке
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
+if(entry.isIntersecting){entry.target.classList.add("show");}
 });
 });
 document.querySelectorAll(".fade-in").forEach(el=>{observer.observe(el);});
-
-// Автоматическая подсветка галереи (опция)
-let index=0;
-setInterval(()=>{
-let images=document.querySelectorAll(".gallery img");
-images.forEach(img=>img.style.opacity="0.5");
-images[index].style.opacity="1";
-index++;
-if(index>=images.length) index=0;
-},2000);
 
 // Гамбургер
 function toggleMenu(){
@@ -516,16 +498,6 @@ menu.classList.toggle("show");
 document.querySelector('.top-float').addEventListener('click', e=>{
 e.preventDefault();
 window.scrollTo({top:0, behavior:'smooth'});
-});
-
-// Прозрачная шапка при скролле
-window.addEventListener('scroll', ()=>{
-const header=document.querySelector('header');
-if(window.scrollY>50){
-header.classList.add('scrolled');
-}else{
-header.classList.remove('scrolled');
-}
 });
 </script>
 
