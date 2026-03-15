@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanHomeLodz – Profesjonalne pranie tapicerki</title>
+
+<!-- SEO -->
+<meta name="description" content="Pranie tapicerki Łódź – profesjonalne czyszczenie sof, narożników, dywanów i materacy. Szybki dojazd do klienta.">
+<meta name="keywords" content="pranie tapicerki łódź, czyszczenie kanapy łódź, pranie dywanów łódź, pranie narożnika łódź, czyszczenie materacy łódź">
+<meta name="robots" content="index, follow">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Roboto',sans-serif;
+background:url('fon.jpg') no-repeat center center fixed;
+background-size:cover;
+}
+
+section{
+background:rgba(255,255,255,0.9);
+margin:30px auto;
+max-width:1100px;
+padding:30px;
+border-radius:10px;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+color:white;
+position:relative;
+}
+
+header h1{
+font-size:40px;
+text-shadow:1px 1px 5px black;
+}
+
+header p{
+text-shadow:1px 1px 5px black;
+}
+
+header img{
+height:80px;
+}
+
+header .google-rating{
+margin-top:10px;
+font-size:20px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+background:white;
+padding:15px;
+}
+
+nav a{
+text-decoration:none;
+font-weight:bold;
+color:#1e88e5;
+}
+
+nav a:hover{
+color:#1565c0;
+}
+
+.action-btn{
+padding:14px 22px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin:5px;
+}
+
+.whatsapp{background:#25d366;}
+.facebook{background:#1877f2;}
+.tiktok{background:black;}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.image-viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.image-viewer img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+.close-viewer{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.review{
+background:#f5f5f5;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.service{
+background:#f7f7f7;
+padding:25px;
+border-radius:12px;
+text-align:center;
+font-size:35px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service h3{
+font-size:20px;
+margin-top:10px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+}
+
+input, textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+background:#1e88e5;
+color:white;
+padding:12px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:white;
+font-size:30px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+.phone-float{
+position:fixed;
+bottom:100px;
+right:25px;
+background:#1e88e5;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+.phone-float:hover,
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:white;
+text-shadow:1px 1px 5px black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="CleanHomeLodz Logo">
+<h1>CleanHomeLodz</h1>
+<div class="google-rating">⭐⭐⭐⭐⭐ <span style="font-size:16px">Ocena klientów w Google</span></div>
+<p>Profesjonalne pranie tapicerki, dywanów i materacy</p>
+<a href="tel:+48505307930" class="action-btn">📞 Zadzwoń</a>
+<a href="https://wa.me/48505307930" class="action-btn whatsapp">WhatsApp</a>
+<a href="https://www.facebook.com/share/18SGRaS2Cu/" target="_blank" class="action-btn facebook">Facebook</a>
+<a href="https://www.tiktok.com/@cleanhome_official?_r=1&_t=ZN-94iez441EWc" target="_blank" class="action-btn tiktok">TikTok</a>
+</header>
+
+<nav>
+<a href="#services">Usługi</a>
+<a href="#pricing">Cennik</a>
+<a href="#gallery">Galeria</a>
+<a href="#reviews">Opinie</a>
+<a href="#map">Lokalizacja</a>
+<a href="#contact">Kontakt</a>
+</nav>
+
+<section id="services" class="fade-in">
+<h2>Nasze usługi</h2>
+<div class="services-grid">
+<div class="service">🛋<h3>Pranie tapicerki</h3><p>Sofy, narożniki i fotele</p></div>
+<div class="service">🧼<h3>Pranie dywanów</h3><p>Dywany i wykładziny</p></div>
+<div class="service">🛏<h3>Pranie materacy</h3><p>Usuwanie roztoczy i zapachów</p></div>
+<div class="service">✨<h3>Usuwanie plam</h3><p>Profesjonalne środki czyszczące</p></div>
+</div>
+</section>
+
+<section id="pricing" class="fade-in">
+<h2>Cennik</h2>
+<p><b>Sofy i narożniki</b></p>
+<ul>
+<li>Narożnik L do 2,5 m – 150–250 zł</li>
+<li>Narożnik L powyżej 2,5 m – 250–400 zł</li>
+<li>Narożnik U – 280–400 zł</li>
+</ul>
+<p><b>Sofy</b></p>
+<ul>
+<li>Sofa 2-osobowa – 160–250 zł</li>
+<li>Sofa 3-osobowa – 200–300 zł</li>
+</ul>
+<p><b>Matrace</b></p>
+<ul>
+<li>Jednoosobowy – 120–200 zł</li>
+<li>Dwuosobowy – 200–280 zł</li>
+</ul>
+<a href="https://wa.me/48505307930?text=Dzień dobry, chciałbym zamówić usługę prania tapicerki." 
+class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp</a>
+</section>
+
+<section id="gallery" class="fade-in">
+<h2>Galeria efektów</h2>
+<div class="gallery">
+<img src="galeria.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria1.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria2.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria3.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria4.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria5.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria6.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria7.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria8.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria9.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria10.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria11.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+</div>
+</section>
+
+<section id="reviews" class="fade-in">
+<h2>Opinie klientów</h2>
+<div class="reviews">
+<div class="review">⭐⭐⭐⭐⭐ <br>Świetna robota! Kanapa wygląda jak nowa. <br><b>Anna – Łódź</b></div>
+<div class="review">⭐⭐⭐⭐⭐ <br>Szybko, czysto i profesjonalnie. Polecam! <br><b>Marek – Łódź</b></div>
+<div class="review">⭐⭐⭐⭐⭐ <br>Dywan był bardzo zabrudzony, teraz wygląda idealnie. <br><b>Kasia – Łódź</b></div>
+</div>
+<br>
+<a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">⭐ Zobacz więcej opinii w Google</a>
+</section>
+
+<section id="map" class="fade-in">
+<h2>Nasza lokalizacja</h2>
+<iframe src="https://maps.google.com/maps?q=lodz&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;border-radius:10px;"></iframe>
+<br><br>
+<a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">📍 Otwórz w Google Maps</a>
+</section>
+
+<section id="contact" class="fade-in">
+<h2>Kontakt</h2>
+<p>Telefon: +48 505 307 930</p>
+<a href="https://wa.me/48505307930" class="action-btn whatsapp">Napisz na WhatsApp</a>
+
+<h2>Zamów usługę</h2>
+<form>
+<input type="text" placeholder="Twoje imię" required>
+<input type="tel" placeholder="Telefon">
+<textarea placeholder="Opisz usługę (np. sofa 3-osobowa)"></textarea>
+<button type="submit">Wyślij zapytanie</button>
+</form>
+</section>
+
+<footer>
+© CleanHomeLodz 2026
+</footer>
+
+<!-- Плавающие кнопки -->
+<a href="https://wa.me/48505307930" class="whatsapp-float">💬</a>
+<a href="tel:+48505307930" class="phone-float">📞</a>
+
+<script>
+// Галерея
+function openImage(img){
+let viewer=document.createElement("div");
+viewer.className="image-viewer";
+let image=document.createElement("img");
+image.src=img.src;
+let close=document.createElement("div");
+close.className="close-viewer";
+close.innerHTML="✕";
+close.onclick=function(){viewer.remove();}
+viewer.onclick=function(e){if(e.target===viewer){viewer.remove();}}
+viewer.appendChild(close);
+viewer.appendChild(image);
+document.body.appendChild(viewer);
+}
+
+// Анимация при прокрутке
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+document.querySelectorAll(".fade-in").forEach(el=>{observer.observe(el);});
+
+// Автоматическая подсветка галереи (опция)
+let index=0;
+setInterval(()=>{
+let images=document.querySelectorAll(".gallery img");
+images.forEach(img=>img.style.opacity="0.5");
+images[index].style.opacity="1";
+index++;
+if(index>=images.length) index=0;
+},2000);
+</script>
+
+</body>
+</html>
