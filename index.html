@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanHomeLodz – Profesjonalne pranie tapicerki</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{ margin:0; font-family:'Roboto',sans-serif; background:#fafafa; color:#333;}
+header{ background:#1e88e5; color:white; padding:60px 20px; text-align:center;}
+header img{ display:block; margin:0 auto 10px; height:80px; }
+header h1{ font-size:2.8em; margin:0;}
+header p{ font-size:1.2em; margin:10px 0 20px;}
+
+nav{ display:flex; justify-content:center; gap:15px; background:#fff; padding:15px 0; flex-wrap:wrap;}
+nav a{ text-decoration:none; color:#1e88e5; font-weight:700;}
+nav a:hover{ color:#1565c0;}
+
+section{ max-width:1000px; margin:auto; padding:50px 20px;}
+h2{ color:#1e88e5; margin-bottom:10px;}
+h3{ color:#1e88e5; margin-bottom:5px;}
+
+.card{ background:white; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:30px;}
+ul{ padding:0; list-style:none;}
+ul li{ padding:5px 0;}
+
+.action-btn {
+  background:#1e88e5;
+  color:white;
+  border:none;
+  padding:15px 25px;
+  font-size:18px;
+  border-radius:8px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+  font-weight:bold;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+.action-btn:hover { background:#1565c0; transform: translateY(-3px);}
+.action-btn.whatsapp { background:#25d366; }
+.action-btn.whatsapp:hover { background:#1ebe57; }
+
+footer{ background:#222; color:white; text-align:center; padding:20px; font-size:0.9em;}
+img{ width:100%; border-radius:8px; margin-bottom:15px;}
+
+/* Галерея */
+.slider { position: relative; overflow: hidden; border-radius:8px; }
+.slides { display: flex; width: 400%; transition: transform 1s ease; }
+.slides img { width: 100%; flex-shrink:0; }
+
+/* Отзывы */
+.review-slider { position: relative; overflow: hidden; height:60px; }
+.review { display:none; font-size:1.1em; text-align:center; padding:10px; }
+.review.active { display:block; }
+
+/* Адаптивность */
+@media (max-width:768px){
+  header h1{ font-size:2em; }
+  section{ padding:20px; }
+  .review-slider{ height:auto; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="CleanHomeLodz Logo">
+  <h1>CleanHomeLodz</h1>
+  <p>Profesjonalne pranie tapicerki, dywanów, materacy i tapicerki samochodowej</p>
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:20px;">
+    <a href="tel:+48505307930" class="action-btn">📞 Zadzwoń teraz</a>
+    <a href="https://wa.me/48505307930" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
+  </div>
+</header>
+
+<nav>
+<a href="#services">Usługi</a>
+<a href="#process">Jak pracujemy</a>
+<a href="#pricing">Cennik</a>
+<a href="#gallery">Galeria</a>
+<a href="#reviews">Opinie</a>
+<a href="#contact">Kontakt</a>
+</nav>
+
+<section id="services">
+<div class="card">
+<h2>Nasze usługi</h2>
+<ul>
+<li>Pranie tapicerki meblowej – kanapy, narożniki, fotele</li>
+<li>Pranie dywanów i wykładzin</li>
+<li>Pranie materacy</li>
+<li>Pranie tapicerki samochodowej</li>
+<li>Usuwanie plam, zapachów i sierści</li>
+</ul>
+</div>
+</section>
+
+<section id="process">
+<div class="card">
+<h2>Jak pracujemy?</h2>
+<ul>
+<li>Ocena zabrudzeń i wybór metody prania</li>
+<li>Odkurzanie i przygotowanie powierzchni</li>
+<li>Nałożenie bezpiecznych środków</li>
+<li>Głębokie pranie ekstrakcyjne</li>
+<li>Usuwanie uporczywych plam</li>
+<li>Suszenie i kontrola jakości</li>
+</ul>
+</div>
+</section>
+
+<section id="pricing">
+<div class="card">
+<h2>Cennik usług – CleanHomeLodz</h2>
+
+<h3>SOFY i NAROŻNIKI</h3>
+<ul>
+<li>Narożnik L do 2,5 m – <b>150–250 zł</b></li>
+<li>Narożnik L powyżej 2,5 m – <b>250–400 zł</b></li>
+<li>Narożnik U – <b>280–400 zł</b></li>
+</ul>
+
+<h3>SOFY</h3>
+<ul>
+<li>Sofa 2-osobowa – <b>160–250 zł</b></li>
+<li>Sofa 3-osobowa – <b>200–300 zł</b></li>
+</ul>
+
+<h3>MATRACE</h3>
+<ul>
+<li>Jednoosobowy – <b>120–200 zł</b></li>
+<li>Dwuosobowy – <b>200–280 zł</b></li>
+</ul>
+
+<h3>DYWANY i WYKŁADZINY</h3>
+<ul>
+<li>Od 15 zł/m²</li>
+<li>Do 2,00 m² – od <b>20 zł/m²</b></li>
+<li>1,60 x 2,30 m – <b>100 zł</b></li>
+<li>2,00 x 3,00 m – <b>130 zł</b></li>
+<li>2,50 x 3,50 m – <b>200 zł</b></li>
+<li>3,00 x 4,00 m – <b>250 zł</b></li>
+<li>Większy/cięższy dywan wyceniamy indywidualnie</li>
+</ul>
+
+<h3>DODATKOWO</h3>
+<ul>
+<li>Poduszki – od <b>10 zł</b></li>
+<li>Miejsce do spania – + <b>40 zł</b></li>
+</ul>
+
+<p><b>Dane kontaktowe:</b> +48 505 307 930</p>
+<a href="https://wa.me/48505307930" class="action-btn whatsapp" target="_blank">💬 WhatsApp</a>
+</div>
+</section>
+
+<!-- Галерея слайдер -->
+<section id="gallery">
+<div class="card">
+<h2>Galeria efektów</h2>
+<div class="slider">
+  <div class="slides">
+    <img src="https://via.placeholder.com/800x400?text=Przed+czyszczeniem+1" alt="Przed czyszczeniem 1">
+    <img src="https://via.placeholder.com/800x400?text=Po+czyszczeniu+1" alt="Po czyszczeniu 1">
+    <img src="https://via.placeholder.com/800x400?text=Przed+czyszczeniem+2" alt="Przed czyszczeniem 2">
+    <img src="https://via.placeholder.com/800x400?text=Po+czyszczeniu+2" alt="Po czyszczeniu 2">
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Отзывы -->
+<section id="reviews">
+<div class="card">
+<h2>Opinie klientów</h2>
+<div class="review-slider">
+  <div class="review active">"Świetna obsługa, kanapa jak nowa!" – Anna K.</div>
+  <div class="review">"Szybko, profesjonalnie i w przystępnej cenie." – Marek S.</div>
+  <div class="review">"Polecam CleanHomeLodz każdemu!" – Katarzyna W.</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Kontakt</h2>
+<p>Telefon: <b>+48 505 307 930</b></p>
+<a href="https://wa.me/48505307930" target="_blank" class="action-btn whatsapp">💬 WhatsApp</a>
+</div>
+</section>
+
+<footer>
+© 2026 CleanHomeLodz • Pranie tapicerki i dywanów
+</footer>
+
+<script>
+// Галерея - автоматический слайдер
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slides img');
+function showSlide() {
+  slideIndex++;
+  if(slideIndex >= slides.length) slideIndex = 0;
+  const offset = -slideIndex*100;
+  document.querySelector('.slides').style.transform = 'translateX(' + offset + '%)';
+}
+setInterval(showSlide, 3000);
+
+// Отзывы - карусель
+let reviewIndex = 0;
+const reviews = document.querySelectorAll('.review');
+function showReview() {
+  reviews.forEach(r => r.classList.remove('active'));
+  reviews[reviewIndex].classList.add('active');
+  reviewIndex++;
+  if(reviewIndex >= reviews.length) reviewIndex = 0;
+}
+showReview();
+setInterval(showReview, 4000);
+</script>
+
+</body>
+</html>
