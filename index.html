@@ -56,7 +56,7 @@ margin-top:10px;
 font-size:20px;
 }
 
-/* Гамбургер по центру сверху */
+/* Гамбургер */
 .hamburger{
 position:absolute;
 top:10px;
@@ -115,7 +115,7 @@ color:#800000;
 }
 
 nav.desktop a:hover{
-color:#5c0000;
+color:#500000;
 }
 
 /* Галерея */
@@ -214,6 +214,29 @@ font-size:20px;
 margin-top:10px;
 }
 
+/* Цены в таблице */
+.price-table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+.price-table th, .price-table td{
+border:1px solid #800000;
+padding:12px;
+text-align:left;
+font-size:20px;
+}
+
+.price-table th{
+background:#800000;
+color:white;
+}
+
+.price-table td{
+background:#ffe6e6;
+}
+
 /* Форма */
 form{
 display:flex;
@@ -244,7 +267,7 @@ transform:scale(1.05);
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Кнопки соцсетей и действия */
+/* Кнопки соцсетей */
 .action-btn{
 padding:14px 22px;
 border-radius:8px;
@@ -384,85 +407,26 @@ nav.desktop{display:none;}
 </div>
 </section>
 
-<!-- Новый раздел Cennik с таблицей -->
 <section id="pricing" class="fade-in translucent-block">
-  <h2>Cennik</h2>
-  <table style="width:100%; border-collapse: collapse; background:#fdf5f5; border-radius:10px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-    <thead>
-      <tr style="background:#800000; color:white; font-weight:bold;">
-        <th style="padding:12px; text-align:left;">Usługa</th>
-        <th style="padding:12px; text-align:left;">Cena</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#fff;">
-        <td colspan="2" style="padding:10px; font-weight:bold;">Sofy i narożniki</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td style="padding:10px;">Narożnik L do 2,5 m</td>
-        <td style="padding:10px; color:#800000; font-weight:bold;">150–250 zł</td>
-      </tr>
-      <tr style="background:#fff;">
-        <td>Narożnik L powyżej 2,5 m</td>
-        <td style="color:#800000; font-weight:bold;">250–400 zł</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Narożnik U</td>
-        <td style="color:#800000; font-weight:bold;">280–400 zł</td>
-      </tr>
-
-      <tr style="background:#fff;">
-        <td colspan="2" style="padding:10px; font-weight:bold;">Sofy</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Sofa 2-osobowa</td>
-        <td style="color:#800000; font-weight:bold;">160–250 zł</td>
-      </tr>
-      <tr style="background:#fff;">
-        <td>Sofa 3-osobowa</td>
-        <td style="color:#800000; font-weight:bold;">200–300 zł</td>
-      </tr>
-
-      <tr style="background:#fdf5f5;">
-        <td colspan="2" style="padding:10px; font-weight:bold;">Matrace</td>
-      </tr>
-      <tr style="background:#fff;">
-        <td>Jednoosobowy</td>
-        <td style="color:#800000; font-weight:bold;">120–200 zł</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Dwuosobowy</td>
-        <td style="color:#800000; font-weight:bold;">200–280 zł</td>
-      </tr>
-
-      <tr style="background:#fff;">
-        <td colspan="2" style="padding:10px; font-weight:bold;">Usługi dodatkowe</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Pranie tapicerki samochodowej (fotele przód+kanapa tylna)</td>
-        <td style="color:#800000; font-weight:bold;">od 250 zł</td>
-      </tr>
-      <tr style="background:#fff;">
-        <td>Kompleksowe czyszczenie wnętrz auta</td>
-        <td style="color:#800000; font-weight:bold;">od 700 zł</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Krzesła</td>
-        <td style="color:#800000; font-weight:bold;">od 25 zł</td>
-      </tr>
-      <tr style="background:#fff;">
-        <td>Poducha meblowa</td>
-        <td style="color:#800000; font-weight:bold;">od 10 zł/szt</td>
-      </tr>
-      <tr style="background:#fdf5f5;">
-        <td>Pranie foteli biurowych</td>
-        <td style="color:#800000; font-weight:bold;">od 35 zł/szt</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <a href="https://wa.me/48505307930?text=Dzień dobry, chciałbym zamówić usługę prania tapicerki." 
-     class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp</a>
+<h2>Cennik</h2>
+<table class="price-table">
+<tr><th>Usługa</th><th>Cena</th></tr>
+<tr><td>Narożnik L do 2,5 m</td><td>150–250 zł</td></tr>
+<tr><td>Narożnik L powyżej 2,5 m</td><td>250–400 zł</td></tr>
+<tr><td>Narożnik U</td><td>280–400 zł</td></tr>
+<tr><td>Sofa 2-osobowa</td><td>160–250 zł</td></tr>
+<tr><td>Sofa 3-osobowa</td><td>200–300 zł</td></tr>
+<tr><td>Matrace jednoosobowy</td><td>120–200 zł</td></tr>
+<tr><td>Matrace dwuosobowy</td><td>200–280 zł</td></tr>
+<tr><td>Pranie tapicerki samochodowej (fotele przód+kanapa tylna)</td><td>od 250 zł</td></tr>
+<tr><td>Kompleksowe czyszczenie wnętrz auta</td><td>od 700 zł</td></tr>
+<tr><td>Krzesła</td><td>od 25 zł</td></tr>
+<tr><td>Poducha meblowa</td><td>od 10 zł/szt</td></tr>
+<tr><td>Pranie foteli biurowych</td><td>od 35 zł/szt</td></tr>
+</table>
+<br>
+<a href="https://wa.me/48505307930?text=Dzień dobry, chciałbym zamówić usługę prania tapicerki." 
+class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp</a>
 </section>
 
 <section id="gallery" class="fade-in translucent-block">
@@ -477,14 +441,14 @@ nav.desktop{display:none;}
 <img src="galeria6.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria7.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria8.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
-<img src="galeria9.webp" alt="Pranie tapicerki – sofa przed и po" onclick="openImage(this)">
+<img src="galeria9.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria10.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria11.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria12.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria13.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria14.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria15.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
-<img src="galeria16.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria16.webp" alt="Pranie tapicerki – sofa przed и po" onclick="openImage(this)">
 </div>
 </section>
 
@@ -501,3 +465,52 @@ nav.desktop{display:none;}
 
 <section id="map" class="fade-in translucent-block">
 <h2>Nasza lokalizacja</h2>
+<iframe src="https://maps.google.com/maps?q=lodz&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;border-radius:10px;"></iframe>
+<br><br>
+<a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">📍 Otwórz w Google Maps</a>
+</section>
+
+<section id="contact" class="fade-in translucent-block">
+<h2>Kontakt</h2>
+<p>Telefon: +48 505 307 930</p>
+<a href="https://wa.me/48505307930" class="action-btn whatsapp">Napisz na WhatsApp</a>
+
+<h2>Zamów usługę</h2>
+<form>
+<input type="text" placeholder="Twoje imię" required>
+<input type="tel" placeholder="Telefon">
+<textarea placeholder="Opisz usługę (np. sofa 3-osobowa)"></textarea>
+<button type="submit">Wyślij zapytanie</button>
+</form>
+</section>
+
+<footer>
+© CleanHomeLodz 2026
+</footer>
+
+<a href="https://wa.me/48505307930" class="whatsapp-float">💬</a>
+<a href="tel:+48505307930" class="phone-float">📞</a>
+<a href="#" class="top-float">⬆</a>
+
+<script>
+function openImage(img){
+let viewer=document.createElement("div");
+viewer.className="image-viewer";
+let image=document.createElement("img");
+image.src=img.src;
+let close=document.createElement("div");
+close.className="close-viewer";
+close.innerHTML="✕";
+close.onclick=function(){viewer.remove();}
+viewer.onclick=function(e){if(e.target===viewer){viewer.remove();}}
+viewer.appendChild(close);
+viewer.appendChild(image);
+document.body.appendChild(viewer);
+}
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show");}
+});
+});
+document.query
