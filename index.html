@@ -373,17 +373,33 @@ nav.desktop{display:none;}
 <a href="#contact">Kontakt</a>
 </nav>
 
+<!-- Блок услуг -->
 <section id="services" class="fade-in translucent-block">
 <h2>Nasze usługi</h2>
 <div class="services-grid">
-<div class="service">🛋<h3>Pranie tapicerki</h3><p>Sofy, narożniki i fotele</p></div>
-<div class="service">🧼<h3>Pranie dywanów</h3><p>Dywany i wykładziny</p></div>
-<div class="service">🛏<h3>Pranie materacy</h3><p>Usuwanie roztoczy i zapachów</p></div>
-<div class="service">✨<h3>Usuwanie plam</h3><p>Profesjonalne środki czyszczące</p></div>
-<div class="service">🚗<h3>Pranie tapicerki samochodowej</h3><p>Fotele przód + kanapa tylna</p></div>
+  <div class="service">🛋<h3>Pranie tapicerki</h3><p>Sofy, narożniki i fotele</p></div>
+  <div class="service">🧼<h3>Pranie dywanów</h3><p>Dywany i wykładziny</p></div>
+  <div class="service">🛏<h3>Pranie materacy</h3><p>Usuwanie roztoczy i zapachów</p></div>
+  <div class="service">✨<h3>Usuwanie plam</h3><p>Profesjonalne środki czyszczące</p></div>
+  <div class="service">🚗<h3>Pranie tapicerki samochodowej</h3><p>Fotele przód + kanapa tylna</p></div>
 </div>
 </section>
 
+<!-- SEO блок -->
+<section class="fade-in translucent-block">
+<h2>Profesjonalne pranie tapicerki w Łodzi</h2>
+<p>
+CleanHomeLodz oferuje profesjonalne pranie tapicerki w Łodzi oraz okolicach. 
+Specjalizujemy się w czyszczeniu sof, narożników, materacy, dywanów oraz tapicerki samochodowej.
+</p>
+<p>
+Jeżeli szukasz usług takich jak <b>pranie tapicerki Łódź</b>, 
+<b>czyszczenie kanapy Łódź</b>, <b>pranie narożnika Łódź</b> 
+lub <b>pranie dywanów Łódź</b> – skontaktuj się z nami.
+</p>
+</section>
+
+<!-- Блок цен -->
 <section id="pricing" class="fade-in translucent-block">
 <h2>Cennik</h2>
 <p><b>Sofy i narożniki</b></p>
@@ -414,6 +430,7 @@ nav.desktop{display:none;}
 class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp</a>
 </section>
 
+<!-- Галерея с 16 фото -->
 <section id="gallery" class="fade-in translucent-block">
 <h2>Galeria efektów</h2>
 <div class="gallery">
@@ -423,7 +440,7 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 <img src="galeria3.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria4.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria5.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
-<img src="galeria6.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
+<img src="galeria6.webp" alt="Pranie tapicerki – sofa przed и po" onclick="openImage(this)">
 <img src="galeria7.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria8.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
 <img src="galeria9.webp" alt="Pranie tapicerki – sofa przed i po" onclick="openImage(this)">
@@ -437,6 +454,7 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 </div>
 </section>
 
+<!-- Отзывы -->
 <section id="reviews" class="fade-in translucent-block">
 <h2>Opinie klientów</h2>
 <div class="reviews">
@@ -448,6 +466,7 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 <a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">⭐ Zobacz więcej opinii w Google</a>
 </section>
 
+<!-- Карта -->
 <section id="map" class="fade-in translucent-block">
 <h2>Nasza lokalizacja</h2>
 <iframe src="https://maps.google.com/maps?q=lodz&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;border-radius:10px;"></iframe>
@@ -455,6 +474,7 @@ class="action-btn whatsapp" target="_blank">💬 Zamów usługę przez WhatsApp<
 <a href="https://maps.app.goo.gl/SrcMYMk8VH7M2WJ2A" target="_blank" class="action-btn">📍 Otwórz w Google Maps</a>
 </section>
 
+<!-- Контакт -->
 <section id="contact" class="fade-in translucent-block">
 <h2>Kontakt</h2>
 <p>Telefon: +48 505 307 930</p>
@@ -487,29 +507,4 @@ let close=document.createElement("div");
 close.className="close-viewer";
 close.innerHTML="✕";
 close.onclick=function(){viewer.remove();}
-viewer.onclick=function(e){if(e.target===viewer){viewer.remove();}}
-viewer.appendChild(close);
-viewer.appendChild(image);
-document.body.appendChild(viewer);
-}
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add("show");}
-});
-});
-document.querySelectorAll(".fade-in").forEach(el=>{observer.observe(el);});
-
-function toggleMenu(){
-const menu=document.getElementById("mobile-menu");
-menu.classList.toggle("show");
-}
-
-document.querySelector('.top-float').addEventListener('click', e=>{
-e.preventDefault();
-window.scrollTo({top:0, behavior:'smooth'});
-});
-</script>
-
-</body>
-</html>
+viewer.onclick=function(e){if(e.target===viewer){viewer
