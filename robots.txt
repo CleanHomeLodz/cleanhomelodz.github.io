@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cleanhomelodz.pl/sitemap.xml
+Sitemap: https://cleanhomelodz.pl/sitemap.xml
